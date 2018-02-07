@@ -54,7 +54,9 @@ public class MainActivity extends AppCompatActivity {
         btnStop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                alarmManager.cancel(pendingIntent);
 
+                Toast.makeText(getApplicationContext(), "Alarm zaustavljen..", Toast.LENGTH_LONG).show();
             }
         });
     }
